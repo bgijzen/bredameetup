@@ -1,0 +1,7 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e45dfde7_002Dd9de_002D4e4b_002Dbd6d_002D10a621298974/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ShuffelingShouldChangeOrder" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::6F9E817E-D78D-45D1-BE2E-B3E4C08C4DA6::net8.0::Net8ExamplesTests.RandomExamplesTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::6F9E817E-D78D-45D1-BE2E-B3E4C08C4DA6::net8.0::Net8ExamplesTests.TimerTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
