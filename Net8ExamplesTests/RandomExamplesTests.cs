@@ -1,6 +1,3 @@
-using System.Text;
-using Xunit.Abstractions;
-
 namespace Net8ExamplesTests;
 
 public class RandomExamplesTests {

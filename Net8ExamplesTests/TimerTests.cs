@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Time.Testing;
 using Net8Examples;
-using Xunit.Abstractions;
 
 namespace Net8ExamplesTests;
 
