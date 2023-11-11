@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net8Examples", "Net8Example
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net8ExamplesTests", "Net8ExamplesTests\Net8ExamplesTests.csproj", "{6F9E817E-D78D-45D1-BE2E-B3E4C08C4DA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContractExample", "ContractExample\ContractExample.csproj", "{EE2A501B-0A75-4DA8-A096-E6676C97A809}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcTester", "GrpcTester\GrpcTester.csproj", "{0D87545B-2D48-4049-AE49-BDF7E0EB0B1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{6F9E817E-D78D-45D1-BE2E-B3E4C08C4DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F9E817E-D78D-45D1-BE2E-B3E4C08C4DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F9E817E-D78D-45D1-BE2E-B3E4C08C4DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE2A501B-0A75-4DA8-A096-E6676C97A809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE2A501B-0A75-4DA8-A096-E6676C97A809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE2A501B-0A75-4DA8-A096-E6676C97A809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE2A501B-0A75-4DA8-A096-E6676C97A809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D87545B-2D48-4049-AE49-BDF7E0EB0B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D87545B-2D48-4049-AE49-BDF7E0EB0B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D87545B-2D48-4049-AE49-BDF7E0EB0B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D87545B-2D48-4049-AE49-BDF7E0EB0B1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

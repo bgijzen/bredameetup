@@ -9,9 +9,8 @@ builder.Services.AddHostedService<TimeProviderExample>();
 
 builder.Services.AddHostedService<HostedLifecycleUpdatesUsingDependencyInjection>();
 
-
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
-
+app.MapGrpcService<GreeterService>();
 app.Run();
