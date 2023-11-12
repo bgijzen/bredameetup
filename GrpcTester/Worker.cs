@@ -10,17 +10,19 @@ public class  Worker : BackgroundService {
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken) {
-        while (!stoppingToken.IsCancellationRequested) {
-            if (_logger.IsEnabled(LogLevel.Information)) {
-                _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-            }
+        if (!stoppingToken.IsCancellationRequested) {
+            var httpClientHandler = new HttpClientHandler();
+            httpClientHandler.ServerCertificateCustomValidationCallback = 
+                HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+            var httpClient = new HttpClient(httpClientHandler);
 
-            var channel = GrpcChannel.ForAddress("https://localhost:5001");
+            var channel = GrpcChannel.ForAddress("https://localhost:7001", new GrpcChannelOptions { HttpClient = httpClient });
             var client = new Greeter.GreeterClient(channel);
 
             var response = await client.SayHelloAsync(
                 new HelloRequest { Name = "World" });
 
+            Console.WriteLine(response);
         }
     }
 }

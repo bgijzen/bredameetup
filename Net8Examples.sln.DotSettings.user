@@ -3,5 +3,6 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::6F9E817E-D78D-45D1-BE2E-B3E4C08C4DA6::net8.0::Net8ExamplesTests.RandomExamplesTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::6F9E817E-D78D-45D1-BE2E-B3E4C08C4DA6::net8.0::Net8ExamplesTests.TimerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::6F9E817E-D78D-45D1-BE2E-B3E4C08C4DA6::net8.0::Net8ExamplesTests.AliasTypeExampleTest.AliasesOnlyWorkInTheScope&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -8,6 +8,7 @@ builder.Services.AddHostedService<TimeProviderExample>();
 #endregion
 
 builder.Services.AddHostedService<HostedLifecycleUpdatesUsingDependencyInjection>();
+builder.Services.AddGrpc();
 
 var app = builder.Build();
 
