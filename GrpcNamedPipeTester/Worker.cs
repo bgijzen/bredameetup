@@ -1,27 +1,24 @@
-using System.Diagnostics;
-using Grpc.Net.Client;
-
-namespace GrpcTester;
+namespace GrpcNamedPipeTester;
 
 public class  Worker : BackgroundService {
+    private readonly NamedPipesConnectionFactory _namedPipesConnectionFactory;
     private readonly ILogger<Worker> _logger;
     private readonly IHostApplicationLifetime _applicationLifetime;
 
-    public Worker(ILogger<Worker> logger, IHostApplicationLifetime applicationLifetime) {
+    public Worker(NamedPipesConnectionFactory namedPipesConnectionFactory, ILogger<Worker> logger, IHostApplicationLifetime applicationLifetime) {
+        _namedPipesConnectionFactory = namedPipesConnectionFactory;
         _logger = logger;
         _applicationLifetime = applicationLifetime;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken) {
-        
         try {
-            var httpClientHandler = new HttpClientHandler();
-            httpClientHandler.ServerCertificateCustomValidationCallback =
-                HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
-            var httpClient = new HttpClient(httpClientHandler);
+            _namedPipesConnectionFactory.PipeName = "HelloWorld";
+            var socketsHttpHandler =
+                new SocketsHttpHandler { ConnectCallback = _namedPipesConnectionFactory.ConnectAsync };
 
-            var channel = GrpcChannel.ForAddress("https://localhost:7001",
-                new GrpcChannelOptions { HttpClient = httpClient });
+            var channel = GrpcChannel.ForAddress("http://localhost",
+                new GrpcChannelOptions { HttpHandler = socketsHttpHandler });
             var client = new Greeter.GreeterClient(channel);
 
             var stopwatch = Stopwatch.StartNew();
@@ -39,8 +36,7 @@ public class  Worker : BackgroundService {
                 stopwatch.Elapsed.TotalSeconds,
                 count / stopwatch.Elapsed.TotalSeconds);
         }
-        finally 
-        {
+        finally {
             _applicationLifetime.StopApplication();
         }
     }

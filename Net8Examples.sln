@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContractExample", "Contract
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcTester", "GrpcTester\GrpcTester.csproj", "{0D87545B-2D48-4049-AE49-BDF7E0EB0B1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcNamedPipeTester", "GrpcNamedPipeTester\GrpcNamedPipeTester.csproj", "{11EEF246-3268-4C5A-BABE-2643918AE1CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{0D87545B-2D48-4049-AE49-BDF7E0EB0B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D87545B-2D48-4049-AE49-BDF7E0EB0B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D87545B-2D48-4049-AE49-BDF7E0EB0B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11EEF246-3268-4C5A-BABE-2643918AE1CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11EEF246-3268-4C5A-BABE-2643918AE1CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11EEF246-3268-4C5A-BABE-2643918AE1CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11EEF246-3268-4C5A-BABE-2643918AE1CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
