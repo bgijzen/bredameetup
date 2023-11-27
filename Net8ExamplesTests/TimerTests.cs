@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Testing;
 using Microsoft.Extensions.Time.Testing;
 using Net8Examples;
 
@@ -38,9 +39,6 @@ public class TimerTests {
         stopwatch.Elapsed.Should().BeLessThan(TimeSpan.FromSeconds(5));
     }
     
-    
-    
-    
     [Fact]
     public async Task PeriodicTimerCallEveryMinute() {
         Stopwatch stopwatch = Stopwatch.StartNew();
@@ -63,5 +61,32 @@ public class TimerTests {
         timer.NumberOfCalls.Should().Be(2);
         
         stopwatch.Elapsed.Should().BeLessThan(TimeSpan.FromSeconds(5));
+    }
+    
+    [Fact]
+    public async Task FakeMore() {
+        Stopwatch stopwatch = Stopwatch.StartNew();
+        
+        var fakeTimerProvider = new FakeTimeProvider();
+        var fakeLogger = new FakeLogger<TimeProviderExampleWithPeriodicTimer>();
+        var timer =
+            new TimeProviderExampleWithPeriodicTimer(fakeTimerProvider, fakeLogger);
+
+        using var cancelationTokenSource = new CancellationTokenSource();
+        var timerTask = timer.StartAsync(cancelationTokenSource.Token);
+        
+        fakeTimerProvider.Advance(TimeSpan.FromSeconds(60));
+        
+        await Task.Delay(TimeSpan.FromSeconds(0.1));
+        timer.NumberOfCalls.Should().Be(1);
+        
+        fakeTimerProvider.Advance(TimeSpan.FromSeconds(60));
+        
+        await Task.Delay(TimeSpan.FromSeconds(0.1));
+        timer.NumberOfCalls.Should().Be(2);
+        
+        stopwatch.Elapsed.Should().BeLessThan(TimeSpan.FromSeconds(5));
+        fakeLogger.LatestRecord.Message.Should().Be("Called");
+        fakeLogger.Collector.Count.Should().Be(timer.NumberOfCalls);
     }
 }
