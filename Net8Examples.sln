@@ -1,14 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net8Examples", "Net8Examples\Net8Examples.csproj", "{17C589BE-14A6-4EBD-86FE-601E3D5507BC}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net8Examples", "Net8Examples\Net8Examples.csproj", "{17C589BE-14A6-4EBD-86FE-601E3D5507BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net8ExamplesTests", "Net8ExamplesTests\Net8ExamplesTests.csproj", "{6F9E817E-D78D-45D1-BE2E-B3E4C08C4DA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net8ExamplesTests", "Net8ExamplesTests\Net8ExamplesTests.csproj", "{6F9E817E-D78D-45D1-BE2E-B3E4C08C4DA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContractExample", "ContractExample\ContractExample.csproj", "{EE2A501B-0A75-4DA8-A096-E6676C97A809}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContractExample", "ContractExample\ContractExample.csproj", "{EE2A501B-0A75-4DA8-A096-E6676C97A809}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcTester", "GrpcTester\GrpcTester.csproj", "{0D87545B-2D48-4049-AE49-BDF7E0EB0B1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcTester", "GrpcTester\GrpcTester.csproj", "{0D87545B-2D48-4049-AE49-BDF7E0EB0B1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcNamedPipeTester", "GrpcNamedPipeTester\GrpcNamedPipeTester.csproj", "{11EEF246-3268-4C5A-BABE-2643918AE1CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcNamedPipeTester", "GrpcNamedPipeTester\GrpcNamedPipeTester.csproj", "{11EEF246-3268-4C5A-BABE-2643918AE1CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeAoTWebApi", "NativeAoTWebApi\NativeAoTWebApi.csproj", "{1A617541-0DDE-45C7-A9C5-5E2492CF5A72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormalWebApi", "NormalWebApi\NormalWebApi.csproj", "{96D01BD2-C1F1-4884-A40A-FA4A3B5211FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcWebApi", "MvcWebApi\MvcWebApi.csproj", "{97AFC460-4E8D-4A00-82BA-36ACF132E3B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +45,23 @@ Global
 		{11EEF246-3268-4C5A-BABE-2643918AE1CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11EEF246-3268-4C5A-BABE-2643918AE1CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11EEF246-3268-4C5A-BABE-2643918AE1CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A617541-0DDE-45C7-A9C5-5E2492CF5A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A617541-0DDE-45C7-A9C5-5E2492CF5A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A617541-0DDE-45C7-A9C5-5E2492CF5A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A617541-0DDE-45C7-A9C5-5E2492CF5A72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D01BD2-C1F1-4884-A40A-FA4A3B5211FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D01BD2-C1F1-4884-A40A-FA4A3B5211FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D01BD2-C1F1-4884-A40A-FA4A3B5211FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D01BD2-C1F1-4884-A40A-FA4A3B5211FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97AFC460-4E8D-4A00-82BA-36ACF132E3B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97AFC460-4E8D-4A00-82BA-36ACF132E3B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97AFC460-4E8D-4A00-82BA-36ACF132E3B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97AFC460-4E8D-4A00-82BA-36ACF132E3B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE9357AA-D09C-441C-A2E1-2388787FEC89}
 	EndGlobalSection
 EndGlobal
